@@ -57,7 +57,9 @@ public class WildernessMapLocationsPlugin extends Plugin
 		return new WildernessMapPoint[]{
 			new WildernessMapPoint("Rev Cave", new WorldPoint(3130, 3838, 0)), // REV CAVE
 			new WildernessMapPoint("35 Port", new WorldPoint(3106, 3789, 0)), // 35 PORT
+			new WildernessMapPoint("East Mossy", new WorldPoint(3180, 3795, 0)), // EAST MOSS GIANTS
 			new WildernessMapPoint("27 Port", new WorldPoint(3035, 3724, 0)), // 27 PORT
+			new WildernessMapPoint("GWD", new WorldPoint(3015, 3745, 0)), // GWD ENTRANCE
 			new WildernessMapPoint("Bandit Camp", new WorldPoint(3037, 3698, 0)), // BANDIT CAMP
 			new WildernessMapPoint("Cemetery", new WorldPoint(2975, 3749, 0)), // CEMETERY
 			new WildernessMapPoint("Chaos Altar", new WorldPoint(2965, 3820, 0)), // CHAOS ALTAR
@@ -68,8 +70,10 @@ public class WildernessMapLocationsPlugin extends Plugin
 			new WildernessMapPoint("50 Port", new WorldPoint(3307, 3920, 0)), // 50 PORT
 			new WildernessMapPoint("New Gate", new WorldPoint(3336, 3900, 0)), // NEW GATE
 			new WildernessMapPoint("Glory Hill", new WorldPoint(3340, 3875, 0)), // GLORY HILL
+			new WildernessMapPoint("Fountain", new WorldPoint(3375, 3890, 0)), // FOUNTAIN OF RUNE
 			new WildernessMapPoint("GDZ", new WorldPoint(3287, 3876, 0)), // GDZ
 			new WildernessMapPoint("GAP", new WorldPoint(3250, 3857, 0)), // GAP
+			new WildernessMapPoint("Light (E)", new WorldPoint(3250, 3887, 0)), // EAST LIGHT
 			new WildernessMapPoint("NW Exit", new WorldPoint(3260, 3827, 0)), // NW EXIT
 			new WildernessMapPoint("Vet'ion", new WorldPoint(3220, 3780, 0)), // VETION
 			new WildernessMapPoint("Mid Exit", new WorldPoint(3284, 3803, 0)), // MID EXIT
@@ -87,6 +91,7 @@ public class WildernessMapLocationsPlugin extends Plugin
 			new WildernessMapPoint("Carralanger", new WorldPoint(3167, 3673, 0)), // CARRALANGER
 			new WildernessMapPoint("Crab TP", new WorldPoint(3351, 3783, 0)), // WILDY CRAB
 			new WildernessMapPoint("Old Gate", new WorldPoint(3224, 3911, 0)), // OLD GATE
+			new WildernessMapPoint("Scorpia", new WorldPoint(3235, 3945, 0)), // OLD GATE
 			new WildernessMapPoint("Kbd Cage (N)", new WorldPoint(3014, 3870, 0)), // NORTH KBD CAGE
 			new WildernessMapPoint("Spindel", new WorldPoint(3180, 3744, 0)), // SPINDEL
 			new WildernessMapPoint("Dwarves", new WorldPoint(3246, 3791, 0)), // DWARVES
