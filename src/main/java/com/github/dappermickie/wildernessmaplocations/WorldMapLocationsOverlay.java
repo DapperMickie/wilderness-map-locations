@@ -1,5 +1,10 @@
 package com.github.dappermickie.wildernessmaplocations;
 
+import java.awt.Color;
+import java.awt.Dimension;
+import java.awt.Graphics2D;
+import java.awt.Point;
+import java.awt.Rectangle;
 import javax.inject.Inject;
 import net.runelite.api.Client;
 import net.runelite.api.coords.WorldPoint;
@@ -8,22 +13,19 @@ import net.runelite.api.widgets.InterfaceID;
 import net.runelite.api.widgets.Widget;
 import net.runelite.api.worldmap.WorldMap;
 import net.runelite.client.ui.overlay.Overlay;
-import net.runelite.client.ui.overlay.worldmap.WorldMapOverlay;
-import net.runelite.client.ui.overlay.worldmap.WorldMapPoint;
 import net.runelite.client.ui.overlay.OverlayLayer;
 import net.runelite.client.ui.overlay.OverlayPosition;
-
-import java.awt.*;
-import net.runelite.client.ui.overlay.worldmap.WorldMapPointManager;
 
 public class WorldMapLocationsOverlay extends Overlay
 {
 	private final Client client;
+	private final WildernessMapLocationsConfig config;
 
 	@Inject
-	public WorldMapLocationsOverlay(Client client)
+	public WorldMapLocationsOverlay(Client client, WildernessMapLocationsConfig config)
 	{
 		this.client = client;
+		this.config = config;
 		setPosition(OverlayPosition.DYNAMIC);
 		setPriority(PRIORITY_HIGHEST);
 		setLayer(OverlayLayer.MANUAL);
@@ -33,6 +35,11 @@ public class WorldMapLocationsOverlay extends Overlay
 	@Override
 	public Dimension render(Graphics2D graphics)
 	{
+		if (!config.wildernessMapLocationsOverlay())
+		{
+			return null;
+		}
+
 		// Ensure the world map is open
 		if (!isWorldMapOpen())
 		{
@@ -40,7 +47,8 @@ public class WorldMapLocationsOverlay extends Overlay
 		}
 
 		// Define points to render
-		for (WildernessMapPoint wMapPoint : WildernessMapLocationsPlugin.getMapPoints()) {
+		for (WildernessMapPoint wMapPoint : WildernessMapLocationsPlugin.getMapPoints())
+		{
 			drawText(graphics, wMapPoint);
 		}
 
@@ -57,7 +65,10 @@ public class WorldMapLocationsOverlay extends Overlay
 		{
 			// Get the map widget bounds
 			Widget map = client.getWidget(ComponentID.WORLD_MAP_MAPVIEW);
-			if (map == null) return;
+			if (map == null)
+			{
+				return;
+			}
 
 			Rectangle worldMapRect = map.getBounds();
 
@@ -79,7 +90,7 @@ public class WorldMapLocationsOverlay extends Overlay
 
 			// Render the background and text
 			var fill = wMapPoint.getFillColor();
-			Color opacityColor = new Color(fill.getRed(), fill.getGreen(), fill.getBlue(), 80);
+			Color opacityColor = new Color(fill.getRed(), fill.getGreen(), fill.getBlue(), config.wildernessMapLocationsBackgroundAlpha());
 
 			graphics.setColor(opacityColor);
 			graphics.fillRect(textX, textY, textWidth, textHeight);

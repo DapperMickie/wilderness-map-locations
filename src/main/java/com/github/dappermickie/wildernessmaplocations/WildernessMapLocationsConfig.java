@@ -8,12 +8,32 @@ import net.runelite.client.config.ConfigItem;
 public interface WildernessMapLocationsConfig extends Config
 {
 	@ConfigItem(
-		keyName = "greeting",
-		name = "Welcome Greeting",
-		description = "The message to show to the user when they login"
+		keyName = "closestLocationOverlayEnabled",
+		name = "Enable Closest Location Overlay",
+		description = "When this is enabled the closest location overlay shows up in wilderness."
 	)
-	default String greeting()
+	default boolean closestLocationOverlayEnabled()
 	{
-		return "Hello";
+		return true;
+	}
+
+	@ConfigItem(
+		keyName = "wildernessMapLocationsOverlay",
+		name = "Enable the wilderness map location overlay",
+		description = "When this is enabled the wilderness map location overlay shows up when you open the world map."
+	)
+	default boolean wildernessMapLocationsOverlay()
+	{
+		return true;
+	}
+
+	@ConfigItem(
+		keyName = "wildernessMapLocationsBackgroundAlpha",
+		name = "Background Alpha",
+		description = "Set the alpha (transparency) of the background color for wilderness map locations (0 is transparent, 100 is filled)."
+	)
+	default int wildernessMapLocationsBackgroundAlpha()
+	{
+		return 80;
 	}
 }
