@@ -3,14 +3,9 @@ package com.github.dappermickie.wildernessmaplocations;
 import com.google.inject.Provides;
 import javax.inject.Inject;
 import lombok.extern.slf4j.Slf4j;
-import net.runelite.api.ChatMessageType;
 import net.runelite.api.Client;
-import net.runelite.api.GameState;
 import net.runelite.api.coords.WorldPoint;
-import net.runelite.api.events.GameStateChanged;
-import net.runelite.api.events.GameTick;
 import net.runelite.client.config.ConfigManager;
-import net.runelite.client.eventbus.Subscribe;
 import net.runelite.client.plugins.Plugin;
 import net.runelite.client.plugins.PluginDescriptor;
 import net.runelite.client.ui.overlay.OverlayManager;
@@ -57,10 +52,11 @@ public class WildernessMapLocationsPlugin extends Plugin
 	}
 
 
-	public static WildernessMapPoint[] getMapPoints() {
-		return new WildernessMapPoint[] {
-			new WildernessMapPoint("Rev Cave", new WorldPoint(3122, 3838, 0)), // REV CAVE
-			new WildernessMapPoint("35 Port", new WorldPoint(3098, 3789, 0)), // 35 PORT
+	public static WildernessMapPoint[] getMapPoints()
+	{
+		return new WildernessMapPoint[]{
+			new WildernessMapPoint("Rev Cave", new WorldPoint(3130, 3838, 0)), // REV CAVE
+			new WildernessMapPoint("35 Port", new WorldPoint(3106, 3789, 0)), // 35 PORT
 			new WildernessMapPoint("27 Port", new WorldPoint(3035, 3724, 0)), // 27 PORT
 			new WildernessMapPoint("Bandit Camp", new WorldPoint(3037, 3698, 0)), // BANDIT CAMP
 			new WildernessMapPoint("Cemetery", new WorldPoint(2975, 3749, 0)), // CEMETERY
@@ -91,7 +87,7 @@ public class WildernessMapLocationsPlugin extends Plugin
 			new WildernessMapPoint("Carralanger", new WorldPoint(3167, 3673, 0)), // CARRALANGER
 			new WildernessMapPoint("Crab TP", new WorldPoint(3351, 3783, 0)), // WILDY CRAB
 			new WildernessMapPoint("Old Gate", new WorldPoint(3224, 3911, 0)), // OLD GATE
-			new WildernessMapPoint("Kbd Cage (N)", new WorldPoint(3029, 3882, 0)), // NORTH KBD CAGE
+			new WildernessMapPoint("Kbd Cage (N)", new WorldPoint(3014, 3870, 0)), // NORTH KBD CAGE
 			new WildernessMapPoint("Spindel", new WorldPoint(3180, 3744, 0)), // SPINDEL
 			new WildernessMapPoint("Dwarves", new WorldPoint(3246, 3791, 0)), // DWARVES
 		};
