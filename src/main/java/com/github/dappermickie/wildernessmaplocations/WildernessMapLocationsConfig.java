@@ -1,8 +1,10 @@
 package com.github.dappermickie.wildernessmaplocations;
 
+import net.runelite.client.config.Alpha;
 import net.runelite.client.config.Config;
 import net.runelite.client.config.ConfigGroup;
 import net.runelite.client.config.ConfigItem;
+import net.runelite.client.config.Range;
 
 @ConfigGroup("WildernessMapLocations")
 public interface WildernessMapLocationsConfig extends Config
@@ -30,8 +32,9 @@ public interface WildernessMapLocationsConfig extends Config
 	@ConfigItem(
 		keyName = "wildernessMapLocationsBackgroundAlpha",
 		name = "Background Alpha",
-		description = "Set the alpha (transparency) of the background color for wilderness map locations (0 is transparent, 100 is filled)."
+		description = "Set the alpha (transparency) of the background color for wilderness map locations (0 is transparent, 255 is filled)."
 	)
+	@Range(min = 0, max = 255)
 	default int wildernessMapLocationsBackgroundAlpha()
 	{
 		return 80;
