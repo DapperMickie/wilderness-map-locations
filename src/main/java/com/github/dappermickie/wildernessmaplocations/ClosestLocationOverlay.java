@@ -17,6 +17,8 @@ public class ClosestLocationOverlay extends OverlayPanel
 	private final Client client;
 	private final WildernessMapLocationsConfig config;
 
+	private WildernessMapPoint closestLocation = null;
+
 	@Inject
 	public ClosestLocationOverlay(Client client, WildernessMapLocationsConfig config)
 	{
@@ -36,22 +38,14 @@ public class ClosestLocationOverlay extends OverlayPanel
 			return null;
 		}
 
-		// Get player's current position
-		WorldPoint playerLocation = client.getLocalPlayer().getWorldLocation();
-
-		// Check if the player is in the wilderness and on plane 0
-		if (!isInWilderness() || playerLocation.getPlane() != 0)
+		if (closestLocation != null)
 		{
-			return null; // Don't render the overlay if not in the wilderness or not on plane 0
-		}
+			// Get player's current position
+			WorldPoint playerLocation = client.getLocalPlayer().getWorldLocation();
 
-		WildernessMapPoint closestPoint = getClosestLocation(playerLocation);
-
-		if (closestPoint != null)
-		{
 			// Get the direction to the closest location
-			String direction = getDirectionToLocation(playerLocation, closestPoint.getWorldPoint());
-			String overlayText = direction + " " + closestPoint.getText();
+			String direction = getDirectionToLocation(playerLocation, closestLocation.getWorldPoint());
+			String overlayText = direction + " " + closestLocation.getText();
 
 			// Calculate the width of the text to adjust the panel size
 			final int overlayWidth = calculateWidth(graphics, overlayText) + 10;
@@ -67,6 +61,20 @@ public class ClosestLocationOverlay extends OverlayPanel
 		}
 
 		return super.render(graphics); // This will render the panel with the text
+	}
+
+	public void updateClosestLocation()
+	{
+		// Get player's current position
+		WorldPoint playerLocation = client.getLocalPlayer().getWorldLocation();
+
+		// Check if the player is in the wilderness and on plane 0
+		if (!isInWilderness())
+		{
+			closestLocation = null;
+			return;
+		}
+		closestLocation = getClosestLocation(playerLocation);
 	}
 
 	private int calculateWidth(Graphics2D graphics, String textToDisplay)
@@ -88,6 +96,10 @@ public class ClosestLocationOverlay extends OverlayPanel
 		// Find the closest point to the player
 		for (WildernessMapPoint point : WildernessMapLocationsPlugin.getMapPoints())
 		{
+			if (point.getWorldPoint().getPlane() != playerLocation.getPlane())
+			{
+				continue;
+			}
 			double distance = playerLocation.distanceTo(point.getWorldPoint());
 			if (distance < closestDistance)
 			{
