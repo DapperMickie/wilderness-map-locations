@@ -105,5 +105,45 @@ public class WildernessMapLocationsPlugin extends Plugin
 		new WildernessMapPoint("Kbd Cage (N)", new WorldPoint(3014, 3870, 0)), // NORTH KBD CAGE
 		new WildernessMapPoint("Spindel", new WorldPoint(3180, 3744, 0)), // SPINDEL
 		new WildernessMapPoint("Dwarves", new WorldPoint(3246, 3791, 0)), // DWARVES
+		new WildernessMapPoint("Exit Cave (S)", new WorldPoint(3360, 10246, 0)), // EXIT CAVE SOUTH
+		new WildernessMapPoint("Exit Cave (M)", new WorldPoint(3361, 10272, 0)), // EXIT CAVE MIDDLE
+		new WildernessMapPoint("Exit Cave (NW)", new WorldPoint(3337, 10286, 0)), // EXIT CAVE NORTHWEST
+		new WildernessMapPoint("Exit Cave (NE)", new WorldPoint(3381, 10286, 0)), // EXIT CAVE NORTHEAST
+		new WildernessMapPoint("Slayer Cave Exit (N)", new WorldPoint(3406, 10145, 0)), // SLAYER CAVE EXIT NORTH
+		new WildernessMapPoint("Black Demons", new WorldPoint(3369, 10125, 0)), // BLACK DEMONS
+		new WildernessMapPoint("Black Dragons", new WorldPoint(3364, 10158, 0)), // BLACK DRAGONS
+		new WildernessMapPoint("Abby Demons", new WorldPoint(3341,10163, 0)), // ABBY DEMONS
+		new WildernessMapPoint("Lesser Demons", new WorldPoint(3338,10134, 0)), // LESSER DEMONS
+		new WildernessMapPoint("Nechs", new WorldPoint(3335,10105, 0)), // NECHS
+		new WildernessMapPoint("Ankous", new WorldPoint(3358,10078, 0)), // ANKOUS
+		new WildernessMapPoint("Ice Giants", new WorldPoint(3342,10056, 0)), // ICE GIANTS
+		new WildernessMapPoint("Green Dragons (N)", new WorldPoint(3400, 10125, 0)), // GREEN DRAGONS NORTH
+		new WildernessMapPoint("Green Dragons (S)", new WorldPoint(3415, 10067, 0)), // GREEN DRAGONS SOUTH
+		new WildernessMapPoint("Jellies", new WorldPoint(3430, 10102, 0)), // JELLIES
+		new WildernessMapPoint("Hellhounds", new WorldPoint(3443, 10084, 0)), // HELLHOUNDS
+		new WildernessMapPoint("Bandits", new WorldPoint(3430, 10073, 0)), // BANDITS
+		new WildernessMapPoint("Dust Devils", new WorldPoint(3440, 10123, 0)), // DUST DEVILS
+		new WildernessMapPoint("Greater Demons", new WorldPoint(3428, 10149, 0)), // GREATER DEMONS
+		new WildernessMapPoint("Slayer Cave Exit (S)", new WorldPoint(3385, 10052, 0)), // SLAYER CAVE EXIT SOUTH
+		new WildernessMapPoint("Bone Yard", new WorldPoint(3244, 3743, 0)), // BONE YARD
+		new WildernessMapPoint("Ice Plat Gate", new WorldPoint(2947, 3905, 0)), // ICE PLATE GATE
+		new WildernessMapPoint("Ice Plat", new WorldPoint(2972, 3935, 0)), // ICE PLATEAU
+		new WildernessMapPoint("Wildy Agi", new WorldPoint(3001, 3949, 0)), // WILDY AGILITY
+		new WildernessMapPoint("Wildy Agi Bridge", new WorldPoint(2998, 3920, 0)), // WILDY AGILITY BRIDGE
+		new WildernessMapPoint("Larrans Ship", new WorldPoint(3018, 3959, 0)), // LARRANS SHIP
+		new WildernessMapPoint("Pirate Hideout", new WorldPoint(3041, 3954, 0)), // PIRATE HIDEOUT
+		new WildernessMapPoint("Deep Dungeon Entrance", new WorldPoint(3046, 3927, 0)), // DEEP WILDY DUNGEON ENTRANCE
+		new WildernessMapPoint("Deep Wildy Dungeon", new WorldPoint(3044, 10322, 0)), // DEEP WILDY DUNGEON
+		new WildernessMapPoint("Mining Hill", new WorldPoint(3056, 3943, 0)), // MINING HILL
+		new WildernessMapPoint("Mage Bank", new WorldPoint(3091, 3959, 0)), // MAGE BANK
+		new WildernessMapPoint("Mage Arena", new WorldPoint(3107, 3932, 0)), // MAGE ARENA
+		new WildernessMapPoint("Lever", new WorldPoint(3155, 3925, 0)), // LEVER
+		new WildernessMapPoint("Resource Area", new WorldPoint(3186, 3933, 0)), // RESOURCE AREA
+		new WildernessMapPoint("Axe Hut", new WorldPoint(3190, 3960, 0)), // AXE HUT
+		new WildernessMapPoint("South Rev Exit", new WorldPoint(3075, 3653, 0)), // SOUTH REV EXIT
+		new WildernessMapPoint("Dark Warrior Castle", new WorldPoint(3029, 3631, 0)), // DARK WARRIOR CASTLE
+		new WildernessMapPoint("Crazy Arch", new WorldPoint(2977, 3691, 0)), // CRAZY ARCH
+		new WildernessMapPoint("Black Salamender", new WorldPoint(3298, 3677, 0)), // BLACK SALAMENDER
+		new WildernessMapPoint("Zombie Pirate Chest", new WorldPoint(3367, 3625, 0)), // ZOMBIE PIRATE CHEST
 	};
 }
